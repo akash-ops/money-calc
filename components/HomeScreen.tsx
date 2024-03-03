@@ -13,9 +13,9 @@ const HomeScreen = () => {
         }
       };
   return (
-    <div className='grid place-items-center bg-zinc-300'>
+    <div className='grid place-items-center bg-slate-500'>
         {/* info container */}
-        <div className='text-center px-10 mt-10 py-10 w-full flex flex-row justify-evenly items-end bg-gradient-to-b from-zinc-200/20 to-zinc-700'>
+        <div className='text-center px-10 mt-10 py-10 w-full flex flex-row justify-evenly items-end bg-gradient-to-b from-slate-500 to-slate-900'>
             <h2 className='w-1/2 text-white'>
             FinTrack is your ultimate solution for effortlessly managing expenses and savings, offering a seamless online platform to track your financial journey with precision and ease. Whether you're a seasoned investor or just starting to budget, FinTrack empowers you to take control of your finances with confidence.
         
