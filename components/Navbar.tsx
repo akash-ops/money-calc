@@ -18,6 +18,10 @@ const Navbar = ({ className }: { className?: string }) => {
             <MenuItem setActive={setActive} active={active} item="Login">
             </MenuItem>
             </Link>
+            <Link href={"/signup"}>
+            <MenuItem setActive={setActive} active={active} item="Sign Up">
+            </MenuItem>
+            </Link>
             <Link href={"/logout"}>
             <MenuItem setActive={setActive} active={active} item="Logout">
             </MenuItem>
