@@ -2,7 +2,7 @@
 import React from "react";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 import Image from "next/image";
-
+// todo -> image updates
 const content = [
   {
     title: "Expense Tracking",
@@ -10,7 +10,7 @@ const content = [
       "Easily monitor your daily, weekly, and monthly expenses across various categories such as groceries, utilities, transportation, entertainment, and more. FinTrack provides intuitive tools to input and categorize your expenditures, giving you a clear overview of where your money goes.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
+       Expense Tracking
       </div>
     ),
   },
@@ -36,7 +36,7 @@ const content = [
       "Define your financial objectives and create savings goals with FinTrack. Whether you're saving for a vacation, a new car, or an emergency fund, FinTrack helps you stay focused and motivated by visualizing your progress towards achieving these milestones",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+        Savings Goals
       </div>
     ),
   },
@@ -46,7 +46,7 @@ const content = [
       "Stay informed about your finances with customizable alerts and notifications. Receive reminders for upcoming bill payments, overspending alerts, or updates on your savings goals, ensuring that you stay on track towards financial stability.",
     content: (
       <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
+        Customizable Alerts
       </div>
     ),
   },
