@@ -18,7 +18,9 @@ import { Input } from "@/components/ui/input"
 
 const formSchema = z.object({
   username: z.string().min(2).max(50),
-  password: z.string().min(4).max(10)
+  email: z.string().email(),
+  newpassword: z.string().min(4).max(10),
+  confirmpassword: z.string().min(4).max(10)
 })
 
 
@@ -27,7 +29,9 @@ const page = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
-      password: "",
+      email: "",
+      newpassword: "",
+      confirmpassword: "",
     },
   })
 
@@ -43,11 +47,11 @@ const page = () => {
         Fin-track is cool
       </p>
       <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
-        Leverage the power of tracking ur goals and future for you by logging in.
+        Leverage the power of tracking ur goals and future for you by signing Up.
       </p>
-      <div className="bg-slate-50 px-5 py-5 rounded-lg w-1/2 place-items-center mt-10">
+      <div className="bg-slate-50 px-5 py-5 rounded-lg w-2/3 place-items-center mt-5">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             <FormField
               control={form.control}
               name="username"
@@ -63,18 +67,44 @@ const page = () => {
             />
             <FormField
               control={form.control}
-              name="password"
+              name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="Password" {...field} className="w-full" />
+                    <Input placeholder="Email" {...field} className="w-full" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            <Button type="submit">Log in</Button>
+            <FormField
+              control={form.control}
+              name="newpassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>New Password</FormLabel>
+                  <FormControl>
+                    <Input placeholder="New Password" {...field} className="w-full" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="confirmpassword"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Confirm Password</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Confirm Password" {...field} className="w-full" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button type="submit">Sign up</Button>
           </form>
         </Form>
       </div>
