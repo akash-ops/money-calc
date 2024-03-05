@@ -35,10 +35,30 @@ const page = () => {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values)
+    let payload = {
+      name: values.username,
+      email: values.email,
+      password: values.newpassword
+    }
+    try {
+      let signupResponse = await fetch('api/register',{
+        method: 'POST',
+        headers: {
+          "Content-Type": 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      console.log("signup response is ", signupResponse);
+      
+    } catch (error) {
+      console.log("error during signup :: ", error);
+      
+    }
   }
   return (
     <WavyBackground className="max-w-4xl flex flex-col items-center h-full justify-center">
